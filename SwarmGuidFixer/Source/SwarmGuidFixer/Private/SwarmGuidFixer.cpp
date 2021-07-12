@@ -77,6 +77,7 @@ void FSwarmGuidFixerModule::PluginButtonClicked()
 		}
 		else
 		{
+			UE_LOG(LogTemp,Error,TEXT("GUIDError: %s, %s"),*(*result)->GetName(),*it->GetLightingGuid().ToString());
 			it->SetLightingGuid();
 			it->Modify();
 		}
